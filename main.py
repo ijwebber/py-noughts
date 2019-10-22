@@ -1,5 +1,6 @@
 
 import display
+import player
 
 def main():
     option = display.menu()
@@ -23,5 +24,8 @@ def main():
         input("Not a correct option, press enter to continue...")
         display.clear()
         main()
+    
+    player1 = player.Player("Isaac", "guitar")
+    print(player1.getName())
 
 main()
