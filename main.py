@@ -3,6 +3,6 @@ import display
 
 def run():
     option = display.menu()
-    print(option)
+    display.clear()
 
 run()
