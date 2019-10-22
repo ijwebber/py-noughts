@@ -2,7 +2,7 @@
 import display
 
 def run():
-    option = display.displayMenu()
+    option = display.menu()
     print(option)
 
 run()
