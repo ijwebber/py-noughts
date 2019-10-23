@@ -3,28 +3,28 @@ import display
 import player
 import game
 
-def findPlayer():
-    option = int(input("Player 1\n1. Search for player\n2. Play as a guest\nOption: "))
-    if option == 1:
-        pass
-        #enter username
-        #player.checkExists
-    elif option == 2:
-        pass
-    else:
-        input("Not a valid option, press enter to continue...")
-        display.clear()
-        findPlayer()
+def getPlayers():
+    a = []
+    i = 0
+    for i in range(0,2):
+        option = int(input("Player", i, "\n1. Search for player\n2. Play as a guest\nOption: "))
+        if option == 1:
+            pass
+            #enter username
+            #player.checkExists
+        elif option == 2:
+            pass
+        else:
+            input("Not a valid option, press enter to continue...")
+            display.clear()
+            findPlayer()
 
 
 def main():
     option = display.menu()
     display.clear()
     if option == 1:
-        findPlayer()
-        pass
-        #choose player from list 
-        #game.new()
+        getPlayers()
     elif option == 2:
         pass
         #player.new()
