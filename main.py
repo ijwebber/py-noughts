@@ -7,7 +7,7 @@ def getPlayers():
     a = []
     i = 0
     for i in range(0,2):
-        option = int(input("Player", i, "\n1. Search for player\n2. Play as a guest\nOption: "))
+        option = int(input("Player " + str(i+1) + "\n1. Search for player\n2. Play as a guest\nOption: "))
         if option == 1:
             pass
             #enter username
@@ -18,6 +18,7 @@ def getPlayers():
             input("Not a valid option, press enter to continue...")
             display.clear()
             getPlayers()
+        display.clear()
 
 
 def main():
