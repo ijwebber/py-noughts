@@ -17,7 +17,7 @@ def getPlayers():
         else:
             input("Not a valid option, press enter to continue...")
             display.clear()
-            findPlayer()
+            getPlayers()
 
 
 def main():
