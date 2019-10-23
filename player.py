@@ -1,9 +1,10 @@
 class Player:
 
-    def __init__(self, name, keyword, username):
+    def __init__(self, name, keyword, username, guest):
         self.__name = name
         self.__keyword = keyword
         self.__username = username
+        self.__guest = guest
 
     #Getters
     def getName(self):
@@ -12,6 +13,9 @@ class Player:
     def getUsername(self):
         return self.__username
 
+    def isGuest(self):
+        return self.__guest
+        
     #Setters
     def setName(self, newName):
         self.__name = newName
