@@ -12,7 +12,3 @@ def game(a):
     for i in range(len(a)):
         print(a[i][0], "|", a[i][1], "|", a[i][2])
 
-def main():
-    game([["X","O"," "],[" ", "O", "X"],[" ","O", " "]])
-
-main()

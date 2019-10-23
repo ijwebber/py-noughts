@@ -7,12 +7,13 @@ class Player:
     def getName(self):
         return self.__name
     
+    def updateName(self, newName):
+        self.__name = newName
+    
     def checkKey(self, newKeyword):
         return (self.__keyword == newKeyword)
 
 def main():
-    player1 = Player("Isaac", "capo")
-    print(player1.getName())
-    print(player1.checkKey("capo"))
+    pass
 
 main()
