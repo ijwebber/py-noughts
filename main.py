@@ -1,6 +1,7 @@
 
 import display
 import player
+import game
 
 def main():
     option = display.menu()
@@ -24,7 +25,8 @@ def main():
         input("Not a correct option, press enter to continue...")
         display.clear()
         main()
-        
-    display.game([["X","O"," "],[" ", " ", "X"],[" ","O", " "]])
+    
+    g = game.Game()
+    display.game(g.board())
 
 main()

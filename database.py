@@ -12,7 +12,7 @@ class Database:
     
     def newPlayer(self, player):
         pass
-        #with sqlite3.connect("db.db")
+        #with sqlite3.connect("db.db") as db:
 
     def checkPlayerExists(self, username):
         with sqlite3.connect("db.db") as db:
