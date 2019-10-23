@@ -24,8 +24,7 @@ def main():
         input("Not a correct option, press enter to continue...")
         display.clear()
         main()
-    
-    player1 = player.Player("Isaac", "guitar")
-    print(player1.getName())
+        
+    display.game([["X","O"," "],[" ", " ", "X"],[" ","O", " "]])
 
 main()
