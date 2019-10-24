@@ -4,7 +4,7 @@ import player
 import game
 
 def play():
-    g = game.Game()
+    pass
 
 def main():
     option = display.menu()
