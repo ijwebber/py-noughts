@@ -1,3 +1,5 @@
+import display
+
 class Player:
 
     def __init__(self, name, keyword, username, guest):
@@ -25,6 +27,22 @@ class Player:
     
     def checkKey(self, newKeyword):
         return (self.__keyword == newKeyword)
+
+def getPlayers():
+    i = 0
+    for i in range(0,2):
+        option = int(input("Player " + str(i+1) + "\n1. Search for player\n2. Play as a guest\nOption: "))
+        if option == 1:
+            pass
+            #enter username
+            #player.checkExists
+        elif option == 2:
+            pass
+        else:
+            input("Not a valid option, press enter to continue...")
+            display.clear()
+            getPlayers()
+        display.clear()
 
 def main():
     pass
