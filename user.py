@@ -1,6 +1,6 @@
 import display
 
-class Player:
+class User:
 
     def __init__(self, name, keyword, username, guest):
         self.__name = name

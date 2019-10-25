@@ -24,3 +24,6 @@ class Game:
     
     def __incrementCurrentPlayer(self):
         self.__currentPlayer = abs(self.__currentPlayer - 1)
+    
+    def isNotOver(self):
+        return True

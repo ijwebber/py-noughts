@@ -1,10 +1,10 @@
 
 import display
-import player
 import game
 
 def play():
-    pass
+    while (game.isNotOver()):
+        pass
 
 def main():
     option = display.menu()
