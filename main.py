@@ -7,9 +7,10 @@ def play():
     while (g.isNotOver()):
         display.clear()
         display.board(g)
+        g.takeTurn()
+        input()
+    #Draw Win Lose 
 
-        x = input("x: ")
-        y = input("y: ")
 
 
 def main():

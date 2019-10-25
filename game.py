@@ -18,7 +18,7 @@ class Game:
     def getOtherPlayer(self):
         return self.__players[abs(self.__currentPlayer - 1)]
 
-    def checkEmpty(self, x, y):
+    def isEmpty(self, x, y):
         if self.__board[y][x] == " ":
             return True
         else:
@@ -33,3 +33,15 @@ class Game:
     
     def isNotOver(self):
         return True
+    
+    def takeTurn(self):
+        notValid = True
+        while notValid:
+            x = int(input("x: "))
+            y = int(input("y: "))
+            #needs a check for valid inputs
+            if self.isEmpty(x,y):
+                self.updateBoard(x,y)
+                notValid = False
+            else:
+                print("Invalid Move: The box is not empty")
