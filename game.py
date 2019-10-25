@@ -19,10 +19,10 @@ class Game:
         return self.__players[abs(self.__currentPlayer - 1)]
 
     def checkEmpty(self, x, y):
-        if self.__board[y][x] != " ":
-            return False
-        else:
+        if self.__board[y][x] == " ":
             return True
+        else:
+            return False
 
     def updateBoard(self, x, y):
         self.__board[y][x] = self.__players[self.__currentPlayer]

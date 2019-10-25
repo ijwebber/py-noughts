@@ -3,8 +3,13 @@ import display
 import game
 
 def play():
-    while (game.isNotOver()):
-        pass
+    g = game.Game()
+    while (g.isNotOver()):
+        display.clear()
+        display.board(g)
+        input("x: ")
+        input("y: ")
+
 
 def main():
     option = display.menu()

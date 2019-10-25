@@ -11,9 +11,12 @@ def clear():
 
 def board(g):
     print("Player", g.getCurrentPlayer(), "<-----")
-    print("Player", g.getOtherPlayer())
+    print("Player", g.getOtherPlayer(),"\n")
+    
+    print("  0   1   2  x")
     i = 0
     a = g.getBoard()
     for i in range(len(a)):
-        print(a[i][0], "|", a[i][1], "|", a[i][2])
+        print(str(i), a[i][0], "|", a[i][1], "|", a[i][2])
+    print("y\n")
 
