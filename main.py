@@ -7,14 +7,15 @@ def play():
     while (g.isNotOver()):
         display.clear()
         display.board(g)
-        input("x: ")
-        input("y: ")
+
+        x = input("x: ")
+        y = input("y: ")
 
 
 def main():
     option = display.menu()
     display.clear()
-    if option == 1:
+    if option == "1":
         play()
     else:
         input("Not a valid option, press enter to continue...")
