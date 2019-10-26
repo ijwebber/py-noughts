@@ -8,6 +8,7 @@ class Game:
                         [" ", " ", " "]]
         self.__players = ["X", "O"]
         self.__currentPlayer = 0
+        self.__winner = ""
 
     def getBoard(self):
         return self.__board
@@ -30,18 +31,23 @@ class Game:
     
     def __incrementCurrentPlayer(self):
         self.__currentPlayer = abs(self.__currentPlayer - 1)
-    
+
     def isNotOver(self):
         return True
     
     def takeTurn(self):
         notValid = True
         while notValid:
-            x = int(input("x: "))
-            y = int(input("y: "))
-            #needs a check for valid inputs
-            if self.isEmpty(x,y):
-                self.updateBoard(x,y)
-                notValid = False
-            else:
-                print("Invalid Move: The box is not empty")
+            try:
+                x = int(input("x: "))
+                y = int(input("y: "))
+                if self.isEmpty(x,y):
+                    self.updateBoard(x,y)
+                    notValid = False
+                else:
+                    print("Invalid Move: The box is not empty")
+            except:
+                print("Invalid Entry: You did not enter a valid input")
+
+        
+            
