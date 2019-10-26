@@ -59,7 +59,12 @@ class Game:
         return False
 
     def __checkForDraw(self):
-        return False
+        x,y = 0,0
+        for x in range(0,3):
+            for y in range(0,3):
+                if self.isEmptySlot(x,y):
+                    return False
+        return True
     
     def isNotOver(self):
         if self.__checkForWinner():
@@ -68,6 +73,9 @@ class Game:
             print("Player " + self.__winner + " has won!")
             return False
         if self.__checkForDraw():
+            display.clear()
+            display.board(self)
+            print("It's a draw")
             return False
         return True
     

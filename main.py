@@ -9,8 +9,6 @@ def play():
         display.board(g)
         g.takeTurn()
 
-
-
 def main():
     option = display.menu()
     display.clear()
