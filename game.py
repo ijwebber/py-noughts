@@ -40,7 +40,11 @@ class Game:
         while notValid:
             try:
                 x = int(input("x: "))
+                if x > 2 or x < 0:
+                    raise Exception
                 y = int(input("y: "))
+                if y > 2 or y < 0:
+                    raise Exception
                 if self.isEmpty(x,y):
                     self.updateBoard(x,y)
                     notValid = False
