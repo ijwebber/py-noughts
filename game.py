@@ -34,15 +34,22 @@ class Game:
 
     def __checkForWinner(self):
         b = self.__board
-        #set winner to whoever the winner is
         #Vertical
+        i = 0
+        for i in range(0,3):
+            if b[0][i] == b[1][i] and b[1][i] == b[2][i] and b[0][i] != " ":
+                self.__winner = b[0][i]
+                return True
 
         #Horizontal
         i = 0
         for i in range(0,3):
             if b[i][0] == b[i][1] and b[i][1] == b[i][2] and b[i][0] != " ":
-                self.__winner = b[0][0]
+                self.__winner = b[i][0]
                 return True
+        
+        #Diagonal
+
         return False
 
     def __checkForDraw(self):
@@ -50,6 +57,9 @@ class Game:
     
     def isNotOver(self):
         if self.__checkForWinner():
+            display.clear()
+            display.board(self)
+            print("Player " + self.__winner + " has won!")
             return False
         if self.__checkForDraw():
             return False

@@ -8,7 +8,6 @@ def play():
         display.clear()
         display.board(g)
         g.takeTurn()
-    #Draw Win Lose 
 
 
 
