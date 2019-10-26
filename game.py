@@ -96,6 +96,3 @@ class Game:
                     print("Invalid Move: The box is not empty")
             except:
                 print("Invalid Entry: You did not enter a valid input")
-
-        
-            

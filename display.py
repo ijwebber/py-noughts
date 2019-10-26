@@ -19,4 +19,3 @@ def board(g):
     for i in range(len(a)):
         print(str(i), a[i][0], "|", a[i][1], "|", a[i][2])
     print("y\n")
-
