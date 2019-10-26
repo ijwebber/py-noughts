@@ -49,6 +49,12 @@ class Game:
                 return True
         
         #Diagonal
+        x,y,i = 0,2,0
+        for i in range(0,2):
+            if b[x][0] == b[1][1] and b[1][1] == b[y][2] and b[1][1] != " ":
+                self.__winner = b[1][1]
+                return True
+            x,y = 2,0
 
         return False
 
