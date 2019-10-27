@@ -1,6 +1,15 @@
 
 import display
 import game
+import user
+
+def newUser():
+    display.clear()
+    print("Create a new User:")
+    name = input("Name: ")
+    username = input("Username: ")
+    keyword = input("Keyword: ")
+    input("New user created! Press enter to continue...")
 
 def play():
     g = game.Game()
@@ -9,7 +18,6 @@ def play():
         display.board(g)
         g.takeTurn()
     input("Press enter to continue...")
-    main()
 
 def main():
     display.clear()
@@ -19,6 +27,10 @@ def main():
         print("Bye :(")
     elif option == "1":
         play()
+        main()
+    elif option == "2":
+        newUser()
+        main()
     else:
         input("Not a valid option, press enter to continue...")
         display.clear()
