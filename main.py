@@ -2,12 +2,15 @@
 import display
 import game
 import user
+import database as db
 
 def newUser():
     display.clear()
     print("Create a new User:")
     name = input("Name: ")
-    username = input("Username: ")
+    while db.checkUsernameExists(username):
+        username = input("Username: ")
+    #Check for existing username
     keyword = input("Keyword: ")
     input("New user created! Press enter to continue...")
 
@@ -36,4 +39,5 @@ def main():
         display.clear()
         main()
 
-main()
+if __name__ == "__main__":
+    main()
